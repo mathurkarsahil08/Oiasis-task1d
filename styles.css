@@ -1,0 +1,96 @@
+/* Reset some basic elements */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ensure the calculator fits well on mobile screens */
+.calculator {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    background: #928f8f;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    min-height: 70px;
+}
+
+.calculation {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    background: #555;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #666;
+}
+
+button:active {
+    background: #777;
+}
+
+.enter {
+    grid-column: span 5;
+    background: #007BFF;
+}
+
+.enter:hover {
+    background: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Ensure everything is responsive */
+@media (max-width: 400px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .enter {
+        grid-column: span 4;
+    }
+}
